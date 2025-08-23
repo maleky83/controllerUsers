@@ -4,11 +4,11 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const router = require('./Routes/routeUser');
 const path = require('path');
-const port = process.env.Port || 3000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 mongoose
-  .connect(process.env.dbU)
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB connected');
     app.listen(port, () => console.log('Server running on port ' + port));
