@@ -70,6 +70,7 @@
   </body>
 
   <script>
+    const url = 'https://controllerusers.onrender.com';
     const card = document.querySelector('#card');
 
     const nav = document.querySelector('#nav');
@@ -90,7 +91,7 @@
 
     const deleteUser = async id => {
       try {
-        const res = await fetch('/users/delete', {
+        const res = await fetch('url/users/delete', {
           method: 'DELETE',
           headers: {
             'content-type': 'application/json'
@@ -104,7 +105,7 @@
 
     const editUser = async (id, newItem) => {
       try {
-        const res = await fetch('/users/' + id, {
+        const res = await fetch('url/users/' + id, {
           method: 'PATCH',
           headers: {
             'content-type': 'application/json'
@@ -178,3 +179,4 @@
     };
   </script>
 </html>
+
