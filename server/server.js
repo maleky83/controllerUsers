@@ -4,15 +4,14 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const router = require('./Routes/routeUser');
 const path = require('path');
+const port = process.env.Port || 3000;
 
 const app = express();
 mongoose
   .connect(process.env.dbU)
   .then(() => {
     console.log('MongoDB connected');
-    app.listen(process.env.Port || 3000, () =>
-      console.log('Server running on port ' + process.env.Port)
-    );
+    app.listen(port, () => console.log('Server running on port ' + port));
   })
   .catch(err => console.log('DB error: ' + err));
 
