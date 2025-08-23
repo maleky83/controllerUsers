@@ -4,6 +4,7 @@ const name = document.querySelector('#name');
 const password = document.querySelector('#password');
 const detail = document.querySelector('#detail');
 const nav = document.querySelector('#nav');
+const url = 'https://controllerusers.onrender.com';
 
 form.addEventListener('submit', e => {
   e.preventDefault();
@@ -18,7 +19,7 @@ form.addEventListener('submit', e => {
 
 const read = async () => {
   try {
-    const res = await fetch('/users');
+    const res = await fetch('url/users');
     const data = await res.json();
     loadUser(data);
   } catch (err) {
@@ -30,7 +31,7 @@ read();
 
 const add = async item => {
   try {
-    const res = await fetch('/users/add', {
+    const res = await fetch('url/users/add', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -88,3 +89,4 @@ const error = item => {
     h4.remove();
   }, 1000);
 };
+
