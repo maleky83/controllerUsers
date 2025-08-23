@@ -4,6 +4,7 @@ const card = document.querySelector('#card');
 const nav = document.querySelector('#nav');
 const param = new URLSearchParams(window.location.search);
 const id = param.get('id');
+console.log(id,param)
 
 const form = document.querySelector('#form');
 const sub = document.querySelector('#form button');
@@ -67,7 +68,7 @@ function showUser(data) {
 
   deleteU.addEventListener('click', () => {
     deleteUser(data._id);
-    window.location.pathname = '/';
+    window.location.pathname = url;
   });
 
   edite.addEventListener('click',() => {

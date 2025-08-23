@@ -45,10 +45,6 @@ const add = async item => {
   }
 };
 
-const clickUser = async id => {
-  window.location.href = `/user.html?id=${id}`;
-};
-
 function loadUser(data) {
   users.innerHTML = '';
   for (let item of data) {
