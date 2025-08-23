@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./client/bootstrap.min.css" />
+    <title>کاربران</title>
+  </head>
+  <body class="bg-light">
+    <div id="main" class="container-fluid min-vh-100 d-flex flex-column">
+      <!-- Header -->
+      <header
+        id="header"
+        class="py-3 bg-primary text-white text-center shadow-sm rounded-bottom"
+      >
+        <h1 class="fw-bold">خوش آمدید</h1>
+      </header>
+
+      <!-- Menu -->
+      <nav
+        id="menu"
+        class="navbar navbar-expand-lg bg-white shadow-sm rounded mt-3 px-3"
+      >
+        <div class="container-fluid">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active fw-semibold" href="/">خانه</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="/aboutme.html">درباره من</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Content -->
+      <main id="nav" class="row flex-grow-1 m-0 p-4 gap-3">
+        <!-- Form -->
+        <div
+          class="col-12 col-md-4 d-flex align-items-center justify-content-center"
+        >
+          <form id="form" class="bg-white shadow p-4 rounded-3 w-100">
+            <h3 class="text-center mb-3 text-primary">اضافه کردن</h3>
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="اسم"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="number"
+                name="password"
+                id="password"
+                placeholder="رمز"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                name="detail"
+                id="detail"
+                class="form-control"
+                placeholder="جزئیات"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">ثبت</button>
+          </form>
+        </div>
+
+        <!-- Users -->
+        <div
+          id="users"
+          class="col-12 col-md-8 row g-3 overflow-scroll align-items-start justify-content-start"
+          style="height: 400px"
+        >
+          <!-- کارت یوزرها اینجا با JS اضافه میشه -->
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer
+        id="footer"
+        class="text-center py-3 bg-dark text-white rounded-top shadow-sm"
+      >
+        <p class="m-0">© 2025 | محمدحسین ملکی</p>
+      </footer>
+    </div>
+  </body>
+  <script src="./client/app.js"></script>
+</html>
