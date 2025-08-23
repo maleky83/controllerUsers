@@ -1,6 +1,6 @@
 const User = require('../models/users');
 
-const allUsers = async (req,res) => {
+const allUsers = async (req, res) => {
   try {
     const findUser = await User.find();
     res.json(findUser);
@@ -9,7 +9,7 @@ const allUsers = async (req,res) => {
   }
 };
 
-const user = async (req,res) => {
+const user = async (req, res) => {
   try {
     const findId = await User.findById(req.params.id);
     res.json(findId);
@@ -18,7 +18,7 @@ const user = async (req,res) => {
   }
 };
 
-const deleteUser = async (req,res) => {
+const deleteUser = async (req, res) => {
   try {
     await User.findByIdAndDelete(req.body.id);
     res.send('حذف شد');
@@ -27,7 +27,7 @@ const deleteUser = async (req,res) => {
   }
 };
 
-const addUser = async (req,res) => {
+const addUser = async (req, res) => {
   try {
     const existUser = await User.findOne({ name: req.body.name });
     if (existUser) {
@@ -45,7 +45,7 @@ const addUser = async (req,res) => {
   }
 };
 
-const editeUser = async (req,res) => {
+const editeUser = async (req, res) => {
   try {
     const exist = await User.findOne({ name: req.body.name });
     if (exist && exist._id.toString() !== req.params.id) {
