@@ -68,7 +68,7 @@ function showUser(data) {
 
   deleteU.addEventListener('click', () => {
     deleteUser(data._id);
-    window.location.href = '../index.html';
+    window.location.href = 'https://maleky83.github.io/controllerUsers/';
   });
 
   edite.addEventListener('click',() => {
