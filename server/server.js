@@ -6,12 +6,11 @@ const router = require('./Routes/routeUser');
 const path = require('path');
 
 const app = express();
-
 mongoose
   .connect(process.env.dbU)
   .then(() => {
     console.log('MongoDB connected');
-    app.listen(process.env.Port, () =>
+    app.listen(process.env.Port || 3000, () =>
       console.log('Server running on port ' + process.env.Port)
     );
   })
