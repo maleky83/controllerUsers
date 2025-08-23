@@ -21,4 +21,5 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../')));
 app.use(express.static(path.join(__dirname, '../client')));
 
-app.use('/users', router);
+app.use('https://controllerusers.onrender.com', router);
+
