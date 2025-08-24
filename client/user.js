@@ -66,9 +66,9 @@ function showUser(data) {
   const edite = document.querySelector('#nav div div #edite');
   edite.innerText = 'ویرایش';
 
-  deleteU.addEventListener('click', () => {
-    deleteUser(data._id);
-    window.location.href = 'https://maleky83.github.io/controllerUsers/';
+  deleteU.addEventListener('click', async () => {
+    await deleteUser(data._id);
+    await window.location.href = 'https://maleky83.github.io/controllerUsers/';
   });
 
   edite.addEventListener('click',() => {
