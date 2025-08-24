@@ -4,7 +4,6 @@ const card = document.querySelector('#card');
 const nav = document.querySelector('#nav');
 const param = new URLSearchParams(window.location.search);
 const id = param.get('id');
-console.log(id,param)
 
 const form = document.querySelector('#form');
 const sub = document.querySelector('#form button');
@@ -68,7 +67,7 @@ function showUser(data) {
 
   deleteU.addEventListener('click', async () => {
     await deleteUser(data._id);
-    await window.location.href = 'https://maleky83.github.io/controllerUsers/';
+    window.location.href = 'https://maleky83.github.io/controllerUsers/';
   });
 
   edite.addEventListener('click',() => {
