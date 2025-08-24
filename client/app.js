@@ -66,7 +66,7 @@ function loadUser(data) {
     detailsBtn.className = 'btn btn-outline-info mt-2';
     detailsBtn.innerText = 'جزئیات';
     detailsBtn.addEventListener('click', () => {
-      window.location.href = `./client/user.html?id=${item._id}`;
+      window.location.href = `https://maleky83.github.io/controllerUsers/client/user.html?id=${item._id}`;
     });
 
     body.append(h5, p, detailsBtn);
@@ -85,3 +85,4 @@ const error = item => {
     h4.remove();
   }, 1000);
 };
+
